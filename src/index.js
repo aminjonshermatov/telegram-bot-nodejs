@@ -47,7 +47,7 @@ const bot = new TelegramBot(config.TOKEN, {
 });
 
 bot.on('message', msg => {
-    console.log(`Working, ${msg.from.first_name}`);
+    console.log(`Working, ${JSON.stringify(msg.from)}`);
 
     const { id } = msg.chat;
 
